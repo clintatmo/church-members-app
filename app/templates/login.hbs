@@ -1,0 +1,34 @@
+<div class="jumbotron text-center">
+    <h1>Login</h1>
+
+    <br/><br/>
+
+    <form {{action 'authenticate' on='submit'}}>
+        <div class="form-horizontal form-group form-group-lg row">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2">
+              {{input id='identification' class="form-control" placeholder='Username' value=identification}}
+            </div>
+        </div>
+        <div class="form-horizontal form-group form-group-lg row">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2">
+              {{input id='password' class="form-control" placeholder='Password' type='password' value=password}}
+            </div>
+        </div>
+        <div class="form-horizontal form-group form-group-lg row">
+            <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-1 col-md-5 col-md-offset-2">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+            </div>
+        </div>
+
+
+    </form>
+
+
+
+    {{#if errorMessage}}
+        <div class="alert alert-warning">{{errorMessage}}</div>
+    {{/if}}
+
+
+    <br/><br/>
+</div>
